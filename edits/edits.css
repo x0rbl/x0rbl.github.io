@@ -1,0 +1,166 @@
+* {
+	font-family: Helvetica;
+}
+
+p.header {
+	color: black;
+	font-size: 40px;
+	font-weight: 900;
+	text-align: center;
+}
+
+span.num {
+	color: #000000;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 700;
+	margin-right: 6px;
+	vertical-align: middle;
+	text-align: center;
+	width: 30px;
+	padding-left: 12px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 8px;
+}
+
+span.filename {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 500;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 150px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+div.row {
+	background-color: #EEEEEE;
+	border-radius: 5px;
+	border: 0;
+	padding: 15px 32px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 100px;
+	margin-left: 100px;
+	vertical-align: middle;
+}
+
+div.mrow {
+	border-radius: 5px;
+	border: 0;
+	padding: 15px 32px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 100px;
+	margin-left: 100px;
+	vertical-align: middle;
+}
+
+button {
+	border-radius: 5px;
+	border: 0;
+	box-shadow: none;
+	color: white;
+	font-size: 16px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+}
+button:enabled {
+	cursor: pointer;
+}
+button.remove {
+	background-color: #BB0000;
+}
+button.remove:focus, button.remove:hover {
+	background-color: #500000;
+}
+button.cbutton:enabled {
+	background-color: #00BB00;
+}
+button.cbutton:focus, button.cbutton:hover:enabled {
+	background-color: #005000;
+}
+button:disabled,
+button[disabled]{
+	background-color: #777777;
+}
+
+.upload {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload + label {
+	background-color: #008CBA;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.upload:focus + label,
+.upload + label:hover {
+	background-color: #005080;
+}
+
+.upload:disabled + label {
+	background-color: #777777;
+}
+
+select {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px 0px 5px 5px;
+	vertical-align: middle;
+}
+
+.songselect {
+	width: 400px;
+}
+
+.chartselect {
+	width: 300px;
+}
+
+.editname {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 5px 0px 5px 5px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	width: 100px;
+}
+
+.message {
+	color: #AA0000;
+}
+
+.problem {
+	box-shadow: 0px 0px 4px 2px #f00;
+}
+span.num.problem {
+	border-radius: 20%;
+	box-shadow: 0px 0px 4px 2px #f00;
+}
+
+code {
+    font-family: monospace;
+}

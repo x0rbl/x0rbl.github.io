@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tests: DDR X2 Edit Creator</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="edits.css"/>
+<script>
+const SHOW_TEST_PASSES = true;
+function testResult(testName, passed, msg) {
+	if (!passed || SHOW_TEST_PASSES) {
+		let x = `${testName}`;
+		if (msg) {
+			x += `: ${msg}`;
+		}
+		if (passed) {
+			x = `<font color="#008000">[PASS] ${x}</font><br/>`;
+		} else {
+			x = `<font color="#800000">[FAIL] ${x}</font><br/>`;
+		}
+		document.getElementById("results").innerHTML += x;
+	}
+}
+</script>
+<script src="../import/aes.js"></script>
+<script src="../import/md5.js"></script>
+<script src="../global.js"></script>
+<script src="../songs.js"></script>
+<script src="../create_edit.js"></script>
+<script src="test_write.js"></script>
+</head>
+<body onload="test_createEdit();">
+<div id="results"></div>
+Check the console for errors
+</body>
+</html>

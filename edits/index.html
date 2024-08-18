@@ -1,1 +1,80 @@
-edits
+<!DOCTYPE html>
+<html>
+<head><title>DDR X2 Edit Creator</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="edits.css"/>
+<script src="import/aes.js"></script>
+<script src="import/md5.js"></script>
+<script src="global.js"></script>
+<script src="songs.js"></script>
+<script src="create_edit.js"></script>
+<script src="main.js"></script>
+</head>
+<body onLoad="start()">
+<p class="header">DDR X2 Edit Creator</p>
+<div id="erows" class="erows"></div>
+<div id="crows" class="crows">
+	<div id="crow" class="row">
+		<input type="file" id="upload" class="upload" multiple/>
+		<label for="upload" id="uploadLabel">Upload .SM/.SSC Files</label>
+		<button id="cbutton" class="cbutton" disabled>Create Edit</button>
+		<select id="region" class="regionselect">
+			<option value="0">Japan</option>
+			<option value="1" selected>United States</option>
+			<option value="2">Europe</option>
+			<option value="3">Asia</option>
+		</select>
+	</div>
+</div>
+<div id="mrows" class="mrows">
+	<div id="mrow" class="mrow">
+		<span id="message" class="message"></span>
+	</div>
+</div>
+
+<a href="#" id="instructions_link" onclick="instructionsToggle();event.preventDefault();">Click to see instructions</a>
+<div id="instructions" style="visibility:hidden">
+<b>Instructions:</b><br/>
+<ol>
+<li>Create edits for charts you want to play in Stepmania, using files from <a href="https://zenius-i-vanisher.com/v5.2/simfiles.php?category=simfiles" target="_blank" rel="noopener noreferrer" title="Opens in a new tab">Zenius-i-Vanisher</a> as a base.  (IMPORTANT: Note the restrictions listed below)</li>
+<li>Click the "Upload .SM/.SSC Files" button to upload up to 30 edits (drag and drop is also supported)</li>
+<li>For each chart:
+ <ol>
+ <li>Verify that the correct song is selected from the drop down. If the song you want is not in the list, it is not playable on DDR X2 US arcade cabinets</li>
+ <li>Select the correct chart within your simfile that you want to play on the machine</li>
+ <li>Select the difficulty (e.g. Expert, Challenge, etc) and meter (the numerical rating from 0-20) that you want for your edit</li>
+ <li>Type an optional name for your edit. Names can contain up to eight characters, and can only contain capital letters, numbers, spaces, and the following special characters: <code>.!@#$%&amp;-_=+\()</code></li>
+ <li>Optionally, select up to two phrases to appear below your chart in game.</li>
+ </ol></li>
+<li>At the bottom, select the region of the machine you intend to play your edits on.  (This must match or the edits will not load)</li>
+<li>When you are satisfied with your charts, press "Create Edit."</li>
+<li>If you have any errors, they will be displayed below.  If the problem is with the chart, you can remove/reupload it to fix the problem.  (Changing the file locally will not automatically reupload the changes to the website)</li>
+<li>If there are no errors, you will get a download for DDR_EDIT_<i>X</i>.DAT, where <i>X</i> corresponds to the region you selected.  Save this file in a folder called "DDR_EDIT" on a flash drive.  For example, if the flash drive is mounted at Z:, the correct path for this file would be <b>Z:\DDR_EDIT\DDR_EDIT_<i>X</i>.DAT</b>.  Do not change the filename.</li>
+</ol>
+
+<b>Restrictions:</b>
+<ol>
+<li>Only 12th notes and 16th notes are allowed (this includes 4ths and 8ths, but does not include 24ths, 32nds, etc)</li>
+<li>Shock arrows are not allowed</li>
+<li>You cannot have 12ths and 8ths/16ths in the same beat</li>
+<li>You cannot have have three or more notes start at the same time</li>
+<li>A freeze cannot end exactly one 12th or 16th note before another begins, on the same arrow</li>
+<li>On double, you cannot have stretch jumps.  This includes all of the following:
+<ol>
+<li><code>L---L---</code></li>
+<li><code>L----D--</code></li>
+<li><code>L-----U-</code></li>
+<li><code>L------R</code></li>
+<li><code>-D---D--</code></li>
+<li><code>-D----U-</code></li>
+<li><code>-D-----R</code></li>
+<li><code>--U--D--</code></li>
+<li><code>--U---U-</code></li>
+<li><code>--U----R</code></li>
+<li><code>---R---R</code></li>
+</ol></li>
+<li>Warning: Edits to &Delta;Max will crash US (and possibly European) DDR X2 machines.</li>
+</ol>
+</div>
+</body>
+</html>
